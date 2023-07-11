@@ -7,6 +7,7 @@ import data from "../../src/data.json"
 import friends from "../../src/friends.json"
 import transactions from "../../src/transactions.json"
 
+
 export const App = () => {
   return (
     <div
@@ -36,7 +37,7 @@ export const App = () => {
       <FriendsList friends={friends}></FriendsList>
 
       <TransactionHistory items={transactions} />
-      
+
     </div>
   );
 };

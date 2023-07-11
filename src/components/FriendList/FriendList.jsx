@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 import clsx from "clsx";
 import css from "./FriendList.module.css";
 
@@ -15,5 +15,14 @@ const FriendList = ( {friends} ) => (
   ))}
 </ul>
 )
+
+FriendList.propTypes = {
+    friends: PropTypes.arrayOf(PropTypes.exact({
+        avatar: PropTypes.string,
+        name: PropTypes.string,
+        isOnline: PropTypes.bool,
+        id: PropTypes.number,
+    })).isRequired
+}
 
 export default FriendList

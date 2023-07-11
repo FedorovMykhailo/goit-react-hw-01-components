@@ -1,4 +1,5 @@
 import css from "./Statistics.module.css";
+import PropTypes from 'prop-types';
 
 const Statistics = ({title, data }) => (
 <section className={css.statistics}>
@@ -13,4 +14,10 @@ const Statistics = ({title, data }) => (
   </ul>
 </section>
 )
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.arrayOf(PropTypes.exact({id: PropTypes.string,
+    label: PropTypes.string, percentage: PropTypes.number})).isRequired
+}
 export default Statistics
