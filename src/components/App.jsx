@@ -2,10 +2,10 @@ import Profile from "../components/Profile/Profile.jsx"
 import Statistics from "../components/Statistics/Statistics.jsx"
 import FriendsList from "../components/FriendList/FriendList.jsx"
 import TransactionHistory from "./TransactionHistory/TransactionHistory.jsx"
-import user from "../../src/user.json"
-import data from "../../src/data.json"
-import friends from "../../src/friends.json"
-import transactions from "../../src/transactions.json"
+import user from "../../src/data/user.json"
+import data from "../../src/data/data.json"
+import friends from "../../src/data/friends.json"
+import transactions from "../../src/data/transactions.json"
 
 
 export const App = () => {
@@ -33,6 +33,7 @@ export const App = () => {
       />
       
       <Statistics title="Upload Stats" data={data}></Statistics>
+       <Statistics data={data}></Statistics>
 
       <FriendsList friends={friends}></FriendsList>
 
